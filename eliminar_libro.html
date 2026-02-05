@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar - Editorial Camaleón</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="icono-admin">Admin panel</h1>
+        </div>       
+        <nav>
+           <a href="gestionar_libros.html" class="btn-volver-admin">VOLVER</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2 class="titulo-seccion-form">¿ELIMINAR PRODUCTO?</h2>
+            
+            <div class="form-content" style="text-align: center;">
+                <p>Estás a punto de borrar permanentemente de la editorial:</p>
+                <h3 style="margin: 20px 0; color: #e67e22;">"Fábulas de la Fontaine"</h3>
+                <p style="font-size: 0.9rem; color: #888;">Esta acción no se puede deshacer.</p>
+            </div>
+
+            <form action="BorrarServlet" method="post">
+                <input type="hidden" name="id" value="1">
+                
+                <div class="form-buttons">
+                    <button type="submit">
+                        CONFIRMAR BORRADO
+                    </button>
+                    
+                    <button type="button" class="btn-cancelar" onclick="window.location.href='gestionar_libros.html'">
+                        CANCELAR
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grupo Atrium - María del Carmen Martín Rodríguez.</p>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar - Editorial Camaleón</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="icono-admin">Admin Menú</h1>
+        </div>       
+        <nav>
+            <a href="gestionar_libros.html" class="btn-volver-admin">VOLVER</a>
+        </nav>
+    </header>
+    <main>            
+        <h2 class="titulo-seccion-form">EDITAR PRODUCTO</h2> 
+        
+        <section class="form-container">
+            <form action="ActualizarLibroServlet" method="post" enctype="multipart/form-data">
+                
+                <input type="hidden" name="id_libro" value="7"> 
+
+                <div class="form-content">
+                    <label for="nombre">Título del Libro:</label>
+                    <input type="text" id="nombre" name="nombre" value="Fábulas de la Fontaine" required>
+
+                    <label for="autor">Autor:</label>
+                    <input type="text" id="autor" name="autor" value="Jean de La Fontaine" required>
+
+                    <label for="descripcion">Descripción completa:</label>
+                    <textarea id="descripcion" name="descripcion" required>Esta es la descripción del libro que ya estaba guardada en la base de datos de la editorial.</textarea>
+
+                    <label for="imagen">Portada del Libro (Dejar vacío si no cambia):</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" class="input-file-bonito">
+                    <p class="ayuda-file">Archivo actual: portada7.jpg | Permitido jpg, gif y png.</p>
+
+                    <div class="form-row-especial">
+                        <div class="form-col-especial">
+                            <label for="precio">Precio (€):</label>
+                            <input type="number" id="precio" name="precio" step="0.01" value="19.99" required>
+                        </div>
+                        <div class="form-col-especial">
+                            <label for="id_categoria">Categoría:</label>
+                            <select id="id_categoria" name="id_categoria">
+                                <option value="1" selected>Fantasía</option>
+                                <option value="2">Novela Histórica</option>
+                                <option value="3">Ciencia Ficción</option>
+                                <option value="4">Terror</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-enviar">
+                        Actualizar Cambios
+                    </button>
+                    <button type="button" class="btn-cancelar" onclick="window.location.href='gestionar_libros.html'">
+                        Descartar
+                    </button>                  
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Grupo Atrium - María del Carmen Martín Rodríguez.</p>
+    </footer>   
+</body>
+</html>

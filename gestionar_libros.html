@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Camaleón</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="icono-admin">Admin panel</h1>
+        </div>       
+        <nav>
+           <a href="crear_libro.html" class="btn-nuevo-admin">AÑADIR</a>
+           <a href="admin.html" class="btn-volver-admin">VOLVER</a>
+        </nav>
+    </header>
+    <main class="admin-panel-listado">
+        <section class="buscador-seccion" style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="busqueda-input" name="busqueda" placeholder="Buscar libros..." 
+                   style="padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc;">
+            <button type="button" id="btn-buscar" class="btn-ver" style="cursor: pointer;">Buscar</button>
+        </section>
+        <h2 class="titulo-seccion-admin">GESTIÓN DE LIBROS</h2> 
+        <table class="tabla-admin">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Categoría</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-libros-body">
+                <tr>
+                    <td>1</td>
+                    <td>Fábulas</td>
+                    <td>Jean Paul</td>
+                    <td>Poesía</td>
+                    <td>15</td>
+                    <td>19.99€</td>
+                    <td>
+                        <a href="editar_libro.html?id=1" class="btn-edit" title="Editar">✏️</a>
+                        <a href="detalle_libro.html?id=1" class="btn-ver-detalle" title="Ver detalles">👁️</a>
+                        <a href="eliminar_libro.html?id=1" class="btn-borrar" title="Eliminar">🗑️</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Fábulas</td>
+                    <td>Jean Paul</td>
+                    <td>Poesía</td>
+                    <td>15</td>
+                    <td>19.99€</td>
+                    <td>
+                        <a href="editar_libro.html?id=1" class="btn-edit" title="Editar">✏️</a>
+                        <a href="detalle_libro.html?id=1" class="btn-ver-detalle" title="Ver detalles">👁️</a>
+                        <a href="eliminar_libro.html?id=1" class="btn-borrar" title="Eliminar">🗑️</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Fábulas</td>
+                    <td>Jean Paul</td>
+                    <td>Poesía</td>
+                    <td>15</td>
+                    <td>19.99€</td>
+                    <td>
+                        <a href="editar_libro.html?id=1" class="btn-edit" title="Editar">✏️</a>
+                        <a href="detalle_libro.html?id=1" class="btn-ver-detalle" title="Ver detalles">👁️</a>
+                        <a href="eliminar_libro.html?id=1" class="btn-borrar" title="Eliminar">🗑️</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Fábulas</td>
+                    <td>Jean Paul</td>
+                    <td>Poesía</td>
+                    <td>15</td>
+                    <td>19.99€</td>
+                    <td>
+                        <a href="editar_libro.html?id=1" class="btn-edit" title="Editar">✏️</a>
+                        <a href="detalle_libro.html?id=1" class="btn-ver-detalle" title="Ver detalles">👁️</a>
+                        <a href="eliminar_libro.html?id=1" class="btn-borrar" title="Eliminar">🗑️</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="paginacion-container" style="text-align: center; margin-top: 30px;">
+            <button type="button" id="pag-anterior" class="btn-ver">Anterior</button>
+            <span id="num-pagina" style="margin: 0 15px; font-weight: bold;">Página 1</span>
+            <button type="button" id="pag-siguiente" class="btn-ver">Siguiente</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Grupo Atrium - María del Carmen Martín Rodríguez.</p>
+    </footer> 
+<script src="js/gestionar_libros.js"></script>  
+</body>
+</html>
